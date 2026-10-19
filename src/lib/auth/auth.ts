@@ -27,10 +27,13 @@ export const auth = betterAuth({
   // Dynamic base URL so one build serves localhost, Vercel previews and the production
   // domain. Patterns must carry the port wildcard because the `host` header does
   // ("localhost:3000" never matches a bare "localhost"). Loopback is forced to http.
-  baseURL: {
-    allowedHosts: ['localhost:*', '127.0.0.1:*', '*.vercel.app', PROD_HOST].filter(Boolean),
-    fallback: PROD_URL,
-  },
+  // baseURL: {
+  //   allowedHosts: ['localhost:*', '127.0.0.1:*', '*.vercel.app', PROD_HOST].filter(Boolean),
+  //   fallback: PROD_URL,
+  // },
+  
+baseURL: "https://livebazardor.netlify.app",
+
   emailAndPassword: {
     enabled: true,
     minPasswordLength: 8,
